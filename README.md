@@ -98,6 +98,11 @@ word_boundary.c
 ```
 is a variable word on a word boundary
 ```     
+tree.c
+```
+a basic binary tree program
+balanced tree counterpart is coming
+```
 
 More coming
             
