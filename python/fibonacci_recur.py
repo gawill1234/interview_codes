@@ -9,15 +9,10 @@ def fibonacci(n, first, second, c):
 
    if (c < n):
       if ( c <= 1 ):
-         next = c
-         second = next
-      else:
-         next = first + second
-         first = second
-         second = next
-      print(next)
+         second = c
       c += 1
-      fibonacci(n, first, second, c)
+      print(second)
+      fibonacci(n, second, first + second, c)
 
    return
  
