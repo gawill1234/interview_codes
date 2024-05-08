@@ -40,6 +40,11 @@ fibonacci.py
 Fibonacci sequence
 python3
 ```
+fibonacci_recur.py
+```
+Fibonacci sequence using recursion
+python3
+```
 
 ## C
 prime
