@@ -45,6 +45,13 @@ fibonacci_recur.py
 Fibonacci sequence using recursion
 python3
 ```
+vowel_cons.py
+```
+Count the vowels and consonants in a string
+Of course, in python, this one is pretty easy.
+At least relative to something like C.
+python3
+```
 
 ## C
 prime
