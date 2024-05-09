@@ -123,6 +123,9 @@ sortastring.c
 ```
 Sort a string in a quick, but unusual, way.
 Notes in the program comments.
+Also, added in the smile, limes, slime example from
+the anagram problem posed up at the top so you can
+see that type of output.
 ```
 
 More coming
