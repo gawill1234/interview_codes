@@ -119,6 +119,11 @@ linked_list.c
 ```
 a basic linked list program
 ```
+sortastring.c
+```
+Sort a string in a quick, but unusual, way.
+Notes in the program comments.
+```
 
 More coming
             
