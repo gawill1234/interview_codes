@@ -115,6 +115,10 @@ tree.c
 a basic binary tree program
 balanced tree counterpart is coming
 ```
+linked_list.c
+```
+a basic linked list program
+```
 
 More coming
             
