@@ -17,10 +17,12 @@
  *  it and it is quick.
  */
 
+#define ARRLEN 256
+
 void init_array(int *myarray) {
 int i;
 
-   for (i = 0; i < 255; i++) {
+   for (i = 0; i < ARRLEN; i++) {
       myarray[i] = 0;
    }
 
@@ -45,7 +47,7 @@ unsigned int i, j, k;
    sorted = (char *)calloc(32, 1);
 
    k = j = 0;
-   for (i = 0; i < 255; i++) {
+   for (i = 0; i < ARRLEN; i++) {
       if (myarray[i] > 0) {
          for (j = 0; j < myarray[i]; j++) {
             sorted[k] = (char)i;
@@ -58,7 +60,7 @@ unsigned int i, j, k;
 }
 
 void runnit(char *mystring) {
-int myarray[256];
+int myarray[ARRLEN];
 char *sortedthing;
 
    init_array(myarray);
