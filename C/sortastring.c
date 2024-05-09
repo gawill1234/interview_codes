@@ -48,7 +48,7 @@ unsigned int i, j, k;
    for (i = 0; i < 255; i++) {
       if (myarray[i] > 0) {
          for (j = 0; j < myarray[i]; j++) {
-            sorted[k] = (char *)i;
+            sorted[k] = (char)i;
             k++;
          }
       }
