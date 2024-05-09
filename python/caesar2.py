@@ -5,7 +5,8 @@ import string
 #  and maketrans
 #
 
-alphabet = string.ascii_uppercase + string.ascii_lowercase + " "
+alphabet = string.digits + string.ascii_uppercase + \
+           string.ascii_lowercase + " " + string.punctuation
 
 def caesar(msg, key):
     return msg.translate(
