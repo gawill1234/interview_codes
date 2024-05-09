@@ -1,13 +1,7 @@
 #
-#  Count vowels and consonants in a string.
-#  First make sure what you are looking at
-#  is a letter, not some other character.
-#  Then see if it is a vowel or not.
+#  Count individual vowels in a string.
 #
 import sys, string
-
-vowels = "aeiou"
-alphabet = string.ascii_lowercase
  
 def vowel(mystring):
 
