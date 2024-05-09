@@ -57,12 +57,10 @@ unsigned int i, j, k;
    return(sorted);
 }
 
-int main() {
+void runnit(char *mystring) {
 int myarray[256];
-char mystring[32];
 char *sortedthing;
 
-   strcpy(mystring, "hello");
    init_array(myarray);
    parse_word_string(mystring, myarray);
    sortedthing = sortedarray(myarray);
@@ -70,43 +68,14 @@ char *sortedthing;
    printf("%s\n", sortedthing);
    free(sortedthing);
 
-   strcpy(mystring, "massive flood");
-   init_array(myarray);
-   parse_word_string(mystring, myarray);
-   sortedthing = sortedarray(myarray);
-   printf("%s\n", mystring);
-   printf("%s\n", sortedthing);
-   free(sortedthing);
+}
 
-   strcpy(mystring, "Mississippi");
-   init_array(myarray);
-   parse_word_string(mystring, myarray);
-   sortedthing = sortedarray(myarray);
-   printf("%s\n", mystring);
-   printf("%s\n", sortedthing);
-   free(sortedthing);
+int main() {
 
-   strcpy(mystring, "smile");
-   init_array(myarray);
-   parse_word_string(mystring, myarray);
-   sortedthing = sortedarray(myarray);
-   printf("%s\n", mystring);
-   printf("%s\n", sortedthing);
-   free(sortedthing);
-
-   strcpy(mystring, "limes");
-   init_array(myarray);
-   parse_word_string(mystring, myarray);
-   sortedthing = sortedarray(myarray);
-   printf("%s\n", mystring);
-   printf("%s\n", sortedthing);
-   free(sortedthing);
-
-   strcpy(mystring, "slime");
-   init_array(myarray);
-   parse_word_string(mystring, myarray);
-   sortedthing = sortedarray(myarray);
-   printf("%s\n", mystring);
-   printf("%s\n", sortedthing);
-   free(sortedthing);
+   runnit("hello");
+   runnit("massive flood");
+   runnit("Mississippi");
+   runnit("smile");
+   runnit("limes");
+   runnit("slime");
 }
