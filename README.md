@@ -52,6 +52,12 @@ Of course, in python, this one is pretty easy.
 At least relative to something like C.
 python3
 ```
+vowel_count.py
+```
+Count the individual vowels in a string
+Uses map()
+python3
+```
 
 ## C
 prime
