@@ -53,6 +53,22 @@ fibonacci_recur.py
 Fibonacci sequence using recursion
 python3
 ```
+fibonacci_recur2.py
+```
+Fibonacci sequence using recursion
+Slow version.  Still works.  But
+noticably slower.
+python3
+```
+fibonacci_recur3.py
+```
+Fibonacci sequence using recursion
+Done to remover the counter that is
+present in fibonacci_recur.py.  Still
+better than fibonacci_recur2.py in 
+terms of performance.
+python3
+```
 vowel_cons.py
 ```
 Count the vowels and consonants in a string
