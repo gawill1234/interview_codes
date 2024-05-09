@@ -20,6 +20,14 @@ caesar's cypher
 python3
 translate and maketrans
 ```
+caesar2.py:
+```
+caesar's cypher
+BUT, with a longer encrypt/decrypt alphabet to
+show it can be done that way.
+python3
+translate and maketrans
+```
 prime.py
 ```
 Tell if number is prime
