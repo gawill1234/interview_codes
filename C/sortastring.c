@@ -40,7 +40,7 @@ int len, i;
 
 char *sortedarray(int *myarray) {
 char *sorted;
-int i, j, k;
+unsigned int i, j, k;
 
    sorted = (char *)calloc(32, 1);
 
@@ -79,6 +79,30 @@ char *sortedthing;
    free(sortedthing);
 
    strcpy(mystring, "Mississippi");
+   init_array(myarray);
+   parse_word_string(mystring, myarray);
+   sortedthing = sortedarray(myarray);
+   printf("%s\n", mystring);
+   printf("%s\n", sortedthing);
+   free(sortedthing);
+
+   strcpy(mystring, "smile");
+   init_array(myarray);
+   parse_word_string(mystring, myarray);
+   sortedthing = sortedarray(myarray);
+   printf("%s\n", mystring);
+   printf("%s\n", sortedthing);
+   free(sortedthing);
+
+   strcpy(mystring, "limes");
+   init_array(myarray);
+   parse_word_string(mystring, myarray);
+   sortedthing = sortedarray(myarray);
+   printf("%s\n", mystring);
+   printf("%s\n", sortedthing);
+   free(sortedthing);
+
+   strcpy(mystring, "slime");
    init_array(myarray);
    parse_word_string(mystring, myarray);
    sortedthing = sortedarray(myarray);
