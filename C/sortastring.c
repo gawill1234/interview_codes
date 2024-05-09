@@ -78,4 +78,5 @@ int main() {
    runnit("smile");
    runnit("limes");
    runnit("slime");
+   runnit("Multi space with punctuation!");
 }
