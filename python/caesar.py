@@ -1,3 +1,4 @@
+import sys
 from string import ascii_uppercase
 
 #
@@ -41,3 +42,26 @@ if __name__ == "__main__":
    new_key  = decryptit(key)
    yy = caesar(xx, new_key)
    print("key:", new_key, "  ", yy)
+
+   print("##################")
+   #
+   #   When they ask you to do the caesar cypher, this is
+   #   actually how they want you to fish for it.
+   #
+   mydict = ["NINTH", "HELL", "HUNTING", "NOT", "NEEDED"]
+   found = False
+
+   print("key:", key, "  ", xx)
+   for i in range(len(alphabet)):
+      yy = caesar(xx, i)
+      print("key:", i, "  ", yy)
+      for item in yy.split(" "):
+         if item in mydict:
+            print("Found key: ", i)
+            found = True
+            break
+
+      if (found):
+         break
+
+   sys.exit(0)
