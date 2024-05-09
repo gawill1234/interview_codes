@@ -25,4 +25,5 @@ if __name__ == "__main__":
       x = fibonacci(c)
       print(x)
       c += 1
+   print("Final value: ", x)
    sys.exit(0)

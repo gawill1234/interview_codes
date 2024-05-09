@@ -12,13 +12,13 @@ def fibonacci(n, first, second, c):
          second = c
       c += 1
       print(second)
-      fibonacci(n, second, first + second, c)
+      first = fibonacci(n, second, first + second, c)
 
-   return
+   return first
 
 if __name__ == "__main__":
 
    n = 30
    print("First ", n, " terms of Fibonacci series are :")
-   fibonacci(n, 0, 0, 0)
+   print("Final value:", fibonacci(n, 0, 0, 0))
    sys.exit(0)
