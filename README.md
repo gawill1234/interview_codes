@@ -1,5 +1,5 @@
 # interview_codes
-Codes asked in interviews and in stupid skills tests
+Codes asked in interviews and in skills tests
 I started writing them as I encountered them.  Some are
 kind of stupid.  Like all the anagrams of a word (i.e.,
 for smile it could be limes, miles, slime).  It's an 
