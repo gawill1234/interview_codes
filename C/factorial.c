@@ -22,20 +22,17 @@ void factorial(int n)
 
 void factorial2(int n)
 {
-   double total = 1.0;
-   double mynumber;
+   unsigned long long total = 1;
+   unsigned long long mynumber;
 
-   printf("Factorial calculation of %d.\n", n);
-   fflush(stdout);
-
-   mynumber = (double)n;
+   mynumber = n;
 
    while (mynumber > 1) {
       total = total * mynumber;
-      mynumber -= 1.0;
+      mynumber -= 1;
    }
 
-   printf("factorial is %.2f\n", total);
+   printf("Factorial2 of %d = %llu\n", n, total);
    fflush(stdout);
 
    return;
