@@ -149,6 +149,10 @@ linked_list.c
 ```
 a basic linked list program
 ```
+maxelem.c
+```
+Find the largest element in an array.  Nothing fancy about this.
+```
 sortastring.c
 ```
 Sort a string in a quick, but unusual, way.
