@@ -24,7 +24,7 @@ int i, curmax;
 
 int main() {
 int elemarr[] = {401, 1, 99, 3, 5, 8, 462, 102, 4, 199, 301, 14, 87, 71, 5, 9, 200, 151, 88, 400};
-int arrmax;
+int arrmax, arrsz;
 
    /*
     *  As long as the array is in scope, you can get its
@@ -35,8 +35,14 @@ int arrmax;
     *
     *  size/length here mean "number of elements"
     */
-   arrmax = maxelem(elemarr, sizeof(elemarr) / sizeof(elemarr[0]));
-
-   printf("Max element: %d\n", arrmax);
+   arrsz = sizeof(elemarr) / sizeof(elemarr[0]);
+   if (arrsz > 0) {
+      arrmax = maxelem(elemarr, arrsz);
+      printf("Max element: %d\n", arrmax);
+   } else {
+      printf("Max element: None<array size is 0>\n");
+   }
    fflush(stdout);
+
+   exit(0);
 }
