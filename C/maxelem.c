@@ -9,9 +9,11 @@ int i, curmax;
     *  about finding the largest element in an
     *  array.  You have to look at all of the 
     *  elements.  This uses an integer array.
+    *  Loop starts at 1 because you initialize
+    *  curmax with 0.
     */
    curmax = elemarr[0];
-   for (i = 0; i < arrsz; i++) {
+   for (i = 1; i < arrsz; i++) {
       if (elemarr[i] > curmax) {
          curmax = elemarr[i];
       }
