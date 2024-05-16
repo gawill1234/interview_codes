@@ -89,6 +89,13 @@ one with a for loop
 one with the sum() function
 python3
 ```
+count_digits.py
+```
+Count the digits in a string
+one with a for loop (more traditional)
+one with the sum(map()) functions, very python3
+python3
+```
 
 ## C
 prime
