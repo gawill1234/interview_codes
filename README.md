@@ -82,6 +82,13 @@ Count the individual vowels in a string
 Uses map()
 python3
 ```
+sum_list.py
+```
+Sum a list of values 2 ways
+one with a for loop
+one with the sum() function
+python3
+```
 
 ## C
 prime
