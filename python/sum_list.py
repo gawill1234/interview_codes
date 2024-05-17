@@ -28,11 +28,14 @@ def adder1(mylist):
 
 #
 #   sum returns a total, not a list
+#   this one also calculates the average of
+#   the list of numbers
 #
 def adder2(mylist):
 
    print("ADDER2(sum) values")
    total = sum(mylist)
+   average = total / len(mylist)
 
    #
    #   Print original list
@@ -41,7 +44,8 @@ def adder2(mylist):
    #
    #   Print total
    #
-   print(total)
+   print("SUM: ", total)
+   print("AVERAGE: ", average)
 
    return
 
