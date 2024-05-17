@@ -96,6 +96,14 @@ one with a for loop (more traditional)
 one with the sum(map()) functions, very python3
 python3
 ```
+num_bits.py
+```
+Count the 1 bits in an integer
+2 methods
+Using division by 2 and modulo 2
+using mask and shift
+python3
+```
 
 ## C
 prime
