@@ -105,6 +105,16 @@ Using division by 2 and modulo 2
 using mask and shift
 python3
 ```
+merge_sort.py
+```
+Do a merge and sort of two lists in a number of
+ways.  One way is known broken.  It is here
+so folks can "recognize" it when they see it.
+The broken part is explained in code comments.
+It came from a popular training site so folks
+will probably see it eventually.
+python3
+```
 
 ## C
 prime
