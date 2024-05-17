@@ -86,9 +86,9 @@ if __name__ == "__main__":
    print("\n")
 
    num_bits(0)
-   num_bits2(1)
-   num_bits2(2)
-   num_bits2(3)
+   num_bits(1)
+   num_bits(2)
+   num_bits(3)
    num_bits(127)
    num_bits(128);
    num_bits(82)
