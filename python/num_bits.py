@@ -33,6 +33,11 @@ def num_bits2(target: int):
    if (target >= 0):
       while (target > 0):
          rmd = target % 2
+         #
+         #   Override python automatic
+         #   variable typing.  Need this
+         #   to stay an int
+         #
          target = int(target / 2)
          if (rmd != 0):
             bits += 1
