@@ -87,6 +87,7 @@ sum_list.py
 Sum a list of values 2 ways
 one with a for loop
 one with the sum() function
+   also computes the average of the list
 python3
 ```
 count_digits.py
