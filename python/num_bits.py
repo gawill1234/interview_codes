@@ -72,6 +72,9 @@ def num_bits(target: int):
 if __name__ == "__main__":
 
    num_bits2(0)
+   num_bits2(1)
+   num_bits2(2)
+   num_bits2(3)
    num_bits2(127)
    num_bits2(128);
    num_bits2(82)
@@ -83,6 +86,9 @@ if __name__ == "__main__":
    print("\n")
 
    num_bits(0)
+   num_bits2(1)
+   num_bits2(2)
+   num_bits2(3)
    num_bits(127)
    num_bits(128);
    num_bits(82)
