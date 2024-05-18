@@ -7,10 +7,37 @@ interesting problem, but writing it would take a while since
 you need to provide a way of storing the basic words.  Just FYI,
 I would lower case all of the letters and sort the letters.  Then
 I'd use that sorted string as a sort of key to the word list. I.e.,
+
+## anagrams of a string
 ```
 smile
 sort to eilms, all in the anagram list will sort to the same thing.
 eilms (key) -> smile, limes, miles, slime
+```
+## detect a linked list cycle
+```
+Code coming soon
+Traverse the linked list with 2 "followers"
+One moves 1 node at a time
+One moves 2 nodes at a time
+If either one hits NULL, there is no cycle
+If there is a cycle, eventually both followers will
+point at the same node
+```
+## break a linked list cycle
+```
+Code coming soon
+I would use a "visited" marker
+Or track the base address of each node you visit
+As you go through the node, set visited to 1 (from 0)
+Or save the node address somewhere (slower, but works)
+If, at any point, visited is already 1, you found where the
+cycle is.  Set the "next" value to NULL
+Or see if you all ready have that address (like I said, slower).
+Though with "visited", you'll need to reset to zero or remember
+it's been set to one for later cycle tests.
+The deal with this is you need to know which node actually ends
+the list and begins the cycle.  "visited" does that.
 ```
 
 ## Python
