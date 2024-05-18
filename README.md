@@ -229,6 +229,11 @@ Also, added in the smile, limes, slime example from
 the anagram problem posed up at the top so you can
 see that type of output.
 ```
+anagram.c
+```
+Show if two strings are anagrams of each other.
+A variant of sortastring.c.
+```
 
 More coming
             
