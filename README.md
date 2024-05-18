@@ -235,6 +235,10 @@ anagram.c
 Show if two strings are anagrams of each other.
 A variant of sortastring.c.
 ```
+swap2.c
+```
+Swap 2 numbers without a third variable(in place, sort of)
+```
 
 More coming
             
