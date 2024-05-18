@@ -13,6 +13,7 @@ I'd use that sorted string as a sort of key to the word list. I.e.,
 smile
 sort to eilms, all in the anagram list will sort to the same thing.
 eilms (key) -> smile, limes, miles, slime
+See anagram.c
 ```
 ## detect a linked list cycle
 ```
