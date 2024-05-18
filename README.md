@@ -187,6 +187,13 @@ validate a soduku puzzle
 str_reverse.c
 ```
 reverse a string
+Since this treats a string like a character array, this
+would also work to reverse an array.  Though you may have
+to supply the array length.  If the array is in scope (I.E.,
+in the function where it was declared) you can do something 
+like this to get the array length:
+   array_size = sizeof(myarray) / sizeof(myarray[0]);
+   (see maxelem.c for a working example of this)
 ```
 whatisi.c
 ```
