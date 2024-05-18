@@ -17,6 +17,7 @@ eilms (key) -> smile, limes, miles, slime
 ## detect a linked list cycle
 ```
 Code coming soon
+AKA, tortoise and hare algorithm
 Traverse the linked list with 2 "followers"
 One moves 1 node at a time
 One moves 2 nodes at a time
