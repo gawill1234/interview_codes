@@ -40,6 +40,7 @@ Though with "visited", you'll need to reset to zero or remember
 it's been set to one for later cycle tests.
 The deal with this is you need to know which node actually ends
 the list and begins the cycle.  "visited" does that.
+see break_cycle.c
 ```
 
 ## Python
@@ -217,6 +218,13 @@ balanced tree counterpart is coming
 linked_list.c
 ```
 a basic linked list program
+```
+break_cycle.c
+```
+Create a linked list
+put in a cycle
+demo the cycle
+break the cycle
 ```
 maxelem.c
 ```
