@@ -40,6 +40,13 @@ Though with "visited", you'll need to reset to zero or remember
 it's been set to one for later cycle tests.
 The deal with this is you need to know which node actually ends
 the list and begins the cycle.  "visited" does that.
+
+Let's be realistic.  If you have to do this, you've got a bug and
+you're trying to figure it out.  Using visited is probably the
+easiest way to find the issue.  If someone says do it all the time,
+tell them your skills are such that you avoid creating the cycle
+in the first place.  :)
+
 see break_cycle.c
 ```
 
