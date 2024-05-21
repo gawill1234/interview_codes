@@ -254,6 +254,11 @@ swap2.c
 ```
 Swap 2 numbers without a third variable(in place, sort of)
 ```
+circle_area.c
+```
+Calculate the area of a circle.
+Bonehead easy one.  I was bored.
+```
 
 More coming
             
