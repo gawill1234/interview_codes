@@ -77,6 +77,13 @@ def num_bits(target: int):
 if __name__ == "__main__":
 
    num_bits2(0)
+   #
+   #   Some older systems allowed
+   #   negative zero.  And the
+   #   internal representation reflected
+   #   that it was a negative zero
+   #
+   num_bits2(-0)
    num_bits2(1)
    num_bits2(2)
    num_bits2(3)
@@ -91,6 +98,7 @@ if __name__ == "__main__":
    print("\n")
 
    num_bits(0)
+   num_bits(-0)
    num_bits(1)
    num_bits(2)
    num_bits(3)
