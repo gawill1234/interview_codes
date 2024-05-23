@@ -17,7 +17,6 @@ See anagram.c
 ```
 ## detect a linked list cycle
 ```
-Code coming soon
 AKA, tortoise and hare algorithm
 Traverse the linked list with 2 "followers"
 One moves 1 node at a time
@@ -29,8 +28,15 @@ point at the same node
 See show_cycle.c, function showacycle()
 ```
 ## break a linked list cycle
+The difference between breaking a cycle and detecting a cycle
+is simple enough.  To detect a cycle, the nodes can become 
+equal to each other anywhere in the cycle.  To break the cycle,
+you need to know WHERE tail that should be null is rejoining the
+list so you can make it null.  It needs to be done that way so
+you don't lose any parts from the middle of the linked list.  The
+visited approach is a far more specific locater than the tortoise
+and hare for the sake of breaking the cycle.
 ```
-Code coming soon
 I would use a "visited" marker
 Or track the base address of each node you visit
 As you go through the node, set visited to 1 (from 0)
