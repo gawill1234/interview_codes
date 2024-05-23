@@ -206,6 +206,7 @@ int main()
 {
 
    num_bits(0);
+   num_bits(-0);
    num_bits(127);
    num_bits(128);
    num_bits(82);
@@ -217,6 +218,7 @@ int main()
    printf("\n\n");
 
    num_bits2(0);
+   num_bits2(-0);
    num_bits2(127);
    num_bits2(128);
    num_bits2(82);
@@ -228,6 +230,7 @@ int main()
    printf("\n\n");
 
    num_bits3(0);
+   num_bits3(-0);
    num_bits3(127);
    num_bits3(128);
    num_bits3(82);
@@ -239,6 +242,7 @@ int main()
    printf("\n\n");
 
    num_bits4(0);
+   num_bits4(-0);
    num_bits4(127);
    num_bits4(128);
    num_bits4(82);
@@ -252,6 +256,7 @@ int main()
    table_init();
 
    num_bits5(0);
+   num_bits5(-0);
    num_bits5(127);
    num_bits5(128);
    num_bits5(82);
@@ -263,6 +268,7 @@ int main()
    printf("\n\n");
 
    num_bits6(0);
+   num_bits6(-0);
    num_bits6(127);
    num_bits6(128);
    num_bits6(82);
@@ -274,6 +280,7 @@ int main()
    printf("\n\n");
 
    num_bits7(0);
+   num_bits7(-0);
    num_bits7(127);
    num_bits7(128);
    num_bits7(82);
