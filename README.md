@@ -25,6 +25,8 @@ One moves 2 nodes at a time
 If either one hits NULL, there is no cycle
 If there is a cycle, eventually both followers will
 point at the same node
+
+See show_cycle.c, function showacycle()
 ```
 ## break a linked list cycle
 ```
@@ -231,6 +233,14 @@ break_cycle.c
 Create a linked list
 put in a cycle
 demo the cycle
+break the cycle
+```
+show_cycle.c
+```
+Create a linked list
+put in a cycle
+demo the cycle
+detect the cycle (tortoise and hare)
 break the cycle
 ```
 maxelem.c
