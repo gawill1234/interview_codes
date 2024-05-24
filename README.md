@@ -261,6 +261,12 @@ Also, added in the smile, limes, slime example from
 the anagram problem posed up at the top so you can
 see that type of output.
 ```
+repeaters.c
+```
+Count the number of times a character occurs within a
+string.  A variant of sortastring.c with different
+outputs.
+```
 anagram.c
 ```
 Show if two strings are anagrams of each other.
