@@ -214,6 +214,7 @@ struct ll *trac1, *trac2;
              */
             if (trac1 == trac2) {
                 printf("##### Cycle detected #####\n");
+                printf("##### Detection happened at node holding: %s\n", trac2->line);
                 return(TRUE);
             }
          }
