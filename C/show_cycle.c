@@ -202,6 +202,16 @@ struct ll *trac1, *trac2;
              */
             trac2 = trac2->next;
             trac1 = trac1->next;
+            /*
+             *   No, it is not necessary to check
+             *   for NULL here.  If trac2 became
+             *   NULL above, these values will not
+             *   be equal and the NULL trac2 will 
+             *   cause the loop to exit at the while
+             *   condition.  trac1 is, possibly, what
+             *   trac2 was.  Regardless, it will not
+             *   be NULL before trac2.
+             */
             if (trac1 == trac2) {
                 printf("##### Cycle detected #####\n");
                 return(TRUE);
