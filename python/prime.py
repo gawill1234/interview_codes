@@ -15,6 +15,15 @@ def isprime(num):
    while ((mood * mood) <= num):
       if ((num % mood) == 0):
          return(False)
+      #
+      #   This value started at 3.  It
+      #   was an odd value.  Since
+      #   only an odd * odd can give an
+      #   odd, there is no need to even
+      #   consider the even values.  So
+      #   increment by 2 to the next
+      #   odd value.
+      #
       mood += 2
 
    return(True)
