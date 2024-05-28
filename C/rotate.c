@@ -56,14 +56,14 @@ int getrealshift(int arrsz, int shift) {
  *  array.
  */
 int secondpos(int start, int arrsz, int shift) {
-int j;
+int newpos;
 
-   j = start + shift;
-   if (j > (arrsz - 1)) {
-      j = j - arrsz;
+   newpos = start + shift;
+   if (newpos > (arrsz - 1)) {
+      newpos = newpos - arrsz;
    }
 
-   return(j);
+   return(newpos);
 }
 
 /*
@@ -108,7 +108,7 @@ int *newarray;
  *   Shift is to the right.
  */
 void rotate2(int *myarray, int arrsz, int shift) {
-int i, j, a, temp, rotate;
+int i, newhead, tail, temp, rotate, done;
 
    printf("Supplied shift: %d\n", shift);
    shift = getrealshift(arrsz, shift);
@@ -118,15 +118,18 @@ int i, j, a, temp, rotate;
 
    for (i = 0; i < (arrsz - shift); i++) {
       temp = myarray[i];
-      j = i;
-      while (1) {
-         a = secondpos(j, arrsz, rotate);
-         if (a == i)
-            break;
-         myarray[j] = myarray[a];
-         j = a;
+      done = 0;
+      newhead = i;
+      while (!done) {
+         tail = secondpos(newhead, arrsz, rotate);
+         if (tail == i) {
+            done = 1;
+         } else {
+            myarray[newhead] = myarray[tail];
+            newhead = tail;
+         }
       }
-      myarray[j] = temp;
+      myarray[newhead] = temp;
    }
 
    return;
