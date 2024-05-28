@@ -281,6 +281,13 @@ circle_area.c
 Calculate the area of a circle.
 Bonehead easy one.  I was bored.
 ```
+rotate.c
+```
+Rotate an array x positions to the right.
+So shift of 2.
+Array of 1 2 3 4 5
+becomes  4 5 1 2 3
+```
 
 More coming
             
