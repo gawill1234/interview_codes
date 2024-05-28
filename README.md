@@ -287,6 +287,9 @@ Rotate an array x positions to the right.
 So shift of 2.
 Array of 1 2 3 4 5
 becomes  4 5 1 2 3
+
+2 methods.  Transfer one array into another and
+in place.
 ```
 
 More coming
