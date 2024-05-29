@@ -301,6 +301,8 @@ Get the square root of number without sqrt().
 sqrt() is called, but only to compare its result 
 with the programatic result.  The multiply the results
 to see how close we get to the original number.
+Once I made the results double instead of float, my
+results are the same as the sqrt() function.
 ```
 
 More coming
