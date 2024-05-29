@@ -78,7 +78,7 @@ float mynum, mlibnum, mysquare, sqrtsquare;
    mysquare = mynum * mynum;
    sqrtsquare = mlibnum * mlibnum;
    printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("                mine square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
 
    number = 25;
    mynum = square_root(number);
@@ -86,7 +86,7 @@ float mynum, mlibnum, mysquare, sqrtsquare;
    mysquare = mynum * mynum;
    sqrtsquare = mlibnum * mlibnum;
    printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("                mine square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
 
    number = 20;
    mynum = square_root(number);
@@ -94,7 +94,7 @@ float mynum, mlibnum, mysquare, sqrtsquare;
    mysquare = mynum * mynum;
    sqrtsquare = mlibnum * mlibnum;
    printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("                mine square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
 
    number = 24;
    mynum = square_root(number);
@@ -102,7 +102,7 @@ float mynum, mlibnum, mysquare, sqrtsquare;
    mysquare = mynum * mynum;
    sqrtsquare = mlibnum * mlibnum;
    printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("                mine square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
 
    number = 39;
    mynum = square_root(number);
@@ -110,7 +110,7 @@ float mynum, mlibnum, mysquare, sqrtsquare;
    mysquare = mynum * mynum;
    sqrtsquare = mlibnum * mlibnum;
    printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("                mine square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
 
    number = 101;
    mynum = square_root(number);
@@ -118,7 +118,7 @@ float mynum, mlibnum, mysquare, sqrtsquare;
    mysquare = mynum * mynum;
    sqrtsquare = mlibnum * mlibnum;
    printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("                mine square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
 
    number = 2048;
    mynum = square_root(number);
@@ -126,5 +126,5 @@ float mynum, mlibnum, mysquare, sqrtsquare;
    mysquare = mynum * mynum;
    sqrtsquare = mlibnum * mlibnum;
    printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("                mine square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
 }
