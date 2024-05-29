@@ -43,6 +43,15 @@ int tries;
        } else {
           return(newcount);
        }
+       /*
+        *   Since floating point equality rarely
+        *   works well, this is a bailout of
+        *   "close enough".  6 places of 
+        *   equality after the decimal point.
+        */
+       if (fabs((newcount * newcount) - orig) < 0.0000001) {
+          return(newcount);
+       }
     }
 
     return(newcount);
