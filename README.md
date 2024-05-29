@@ -291,6 +291,17 @@ becomes  4 5 1 2 3
 2 methods.  Transfer one array into another and
 in place.
 ```
+power.c
+```
+Do the power of a number without pow().
+```
+sqrt.c
+```
+Get the square root of number without sqrt().
+sqrt() is called, but only to compare its result 
+with the programatic result.  The multiply the results
+to see how close we get to the original number.
+```
 
 More coming
             
