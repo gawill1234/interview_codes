@@ -19,15 +19,25 @@ int tries;
     starter = 0.5;
     newcount = count + starter;
     /*
-     *   Set the limit of tries to 100.
-     *   Seems as good as anything else.
+     *   Set the limit of tries to 75.
+     *   Experiments showed that 50 is
+     *   probably good enough in terms
+     *   of quality of results.  Set
+     *   to 75 just to give some room.
      */
-    while (tries < 100) {
+    while (tries < 75) {
        tries += 1;
        if ((newcount * newcount) > orig) {
           starter = starter / 2.0;
           newcount = newcount - starter;
        } else if ((newcount * newcount) < orig) {
+          /*
+           *  This addition of "more" can be done
+           *  in different ways.  But, this is the
+           *  one that broke the while loop in the
+           *  lowest number of attempts on a consistent
+           *  basis.
+           */
           starter = starter + (starter / 2.0);
           newcount = newcount + starter;
        } else {
