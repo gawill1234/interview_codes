@@ -11,8 +11,8 @@
  *   if the value times itself is greater
  *   than what we are looking for.
  */
-float guesstherest(long orig, float count) {
-float newcount, starter;
+double guesstherest(long orig, double count) {
+double newcount, starter;
 int tries;
 
     tries = 0;
@@ -43,10 +43,10 @@ int tries;
  *   Uses a combination of subtract
  *   the odds and final guessing.
  */
-float square_root(long orig) {
+double square_root(long orig) {
 int i;
 long startval;
-float count;
+double count;
 
    startval = orig;
    count = 0;
@@ -70,7 +70,7 @@ float count;
  */
 int main() {
 long number;
-float mynum, mlibnum, mysquare, sqrtsquare;
+double mynum, mlibnum, mysquare, sqrtsquare;
 
    number = 16;
    mynum = square_root(number);
