@@ -16,6 +16,7 @@ int wsize;
       return;
   
    /* wsize will probably be 4(word size on 32 bit machines) */
+   /* on newer machines, will probably be 8                  */
    wsize = sizeof(long);
 
    if (((int)myaddr % wsize) == 0)
@@ -40,7 +41,7 @@ int main()
 long *myaddr;
 long z = 9;
 char *addr2;
-char arr[4] = "abcd";
+char arr[8] = "abcdefgh";
 
    myaddr = &z;
    addr_bound(myaddr);
@@ -51,6 +52,14 @@ char arr[4] = "abcd";
    addr2 = &arr[2];
    addr_bound(addr2);
    addr2 = &arr[3];
+   addr_bound(addr2);
+   addr2 = &arr[4];
+   addr_bound(addr2);
+   addr2 = &arr[5];
+   addr_bound(addr2);
+   addr2 = &arr[6];
+   addr_bound(addr2);
+   addr2 = &arr[7];
    addr_bound(addr2);
    printf("\n\n");
 }
