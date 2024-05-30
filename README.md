@@ -341,6 +341,10 @@ Fibonacci sequence
 They work the same.  But each illustrates a different means of
 variable initialization
 ```
+vowel_cons.go
+```
+Count vowels and consonants in a string.
+```
 
 More coming
             
