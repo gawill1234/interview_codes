@@ -327,6 +327,10 @@ factorial.go
 ```
 Factorial of a number
 ```
+swap2.go
+```
+swap two numbers without a temp variable (in place)
+```
 
 More coming
             
