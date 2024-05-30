@@ -4,9 +4,17 @@ I started writing them as I encountered them.  Some are
 kind of stupid.  Like all the anagrams of a word (i.e.,
 for smile it could be limes, miles, slime).  It's an 
 interesting problem, but writing it would take a while since
-you need to provide a way of storing the basic words.  Just FYI,
-I would lower case all of the letters and sort the letters.  Then
-I'd use that sorted string as a sort of key to the word list. I.e.,
+you need to provide a way of storing the basic words.  See
+below for my solution to that based on "are two words anagrams".
+
+So, did I write these?  Yes, I did.  Could I do them in 30 or 45
+minutes on some skills test?  I doubt it.  To do them in the time
+those goofy tests give you, I'd have to go here and copy the one
+from here into the answer.
+
+And I don't remember every little thing about every language
+feature.  I've usually found it is enough to know that a
+capability exists within a language and then look it up.
 
 ## anagrams of a string
 ```
