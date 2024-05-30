@@ -323,6 +323,10 @@ odd_or_even.go:
 ```
 Is a number odd or even
 ```
+factorial.go
+```
+Factorial of a number
+```
 
 More coming
             
