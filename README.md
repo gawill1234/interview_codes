@@ -312,6 +312,13 @@ to see how close we get to the original number.
 Once I made the results double instead of float, my
 results are the same as the sqrt() function.
 ```
+## Go
+tprimes.go:
+```
+Find if a number is prime or not.
+First one here.  There will be others.
+I want to refresh my Go skills.
+```
 
 More coming
             
