@@ -16,6 +16,25 @@ And I don't remember every little thing about every language
 feature.  I've usually found it is enough to know that a
 capability exists within a language and then look it up.
 
+If someone has a request, I can work in the following languages:
+- C/C++
+- python
+- go
+- tcl/tk
+- ruby
+- java
+- FORTRAN
+- COBOL (sad, but true)
+- pascal
+- snobol
+- lisp (but not great at this one)
+- algol (like pascal)
+- PL/1 (like FORTRAN)
+- C#
+- VB
+Bear in mind, some will go faster than others.  Depending on what
+you want, you may have to pay for it.
+
 ## anagrams of a string
 ```
 smile
