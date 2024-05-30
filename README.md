@@ -331,6 +331,10 @@ swap2.go
 ```
 swap two numbers without a temp variable (in place)
 ```
+circle_area.go
+```
+Calculate the area of a circle.
+```
 
 More coming
             
