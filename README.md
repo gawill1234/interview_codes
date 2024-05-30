@@ -319,6 +319,10 @@ Find if a number is prime or not.
 First one here.  There will be others.
 I want to refresh my Go skills.
 ```
+odd_or_even.go:
+```
+Is a number odd or even
+```
 
 More coming
             
