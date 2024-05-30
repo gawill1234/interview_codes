@@ -335,6 +335,12 @@ circle_area.go
 ```
 Calculate the area of a circle.
 ```
+fibonacci.go and fibonacci2.go
+```
+Fibonacci sequence
+They work the same.  But each illustrates a different means of
+variable initialization
+```
 
 More coming
             
