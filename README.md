@@ -26,10 +26,7 @@ If someone has a request, I can work in the following languages:
 - FORTRAN
 - COBOL (sad, but true)
 - pascal
-- snobol
-- lisp (but not great at this one)
-- algol (like pascal)
-- PL/1 (like FORTRAN)
+- Ada (not really, but an excuse to learn it would be good)
 - C#
 - VB
 
