@@ -10,7 +10,7 @@ var next int = 0
 var n int = 30
 var c int = 0
  
-   fmt.Printf("First %d terms of Fibonacci series are :", n)
+   fmt.Printf("First %d terms of Fibonacci series are :\n", n)
  
    for (c < n) {
       if ( c <= 1 ) {
