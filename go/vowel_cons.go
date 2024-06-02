@@ -49,8 +49,8 @@ var r []rune
 //
 func In(a rune, b []rune) bool {
 
-   for i := 0; i < len(b); i++ {
-      if (a == b[i]) {
+   for _, ziggle := range b {
+      if (a == ziggle) {
          return true
       }
    }
