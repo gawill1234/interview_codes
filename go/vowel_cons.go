@@ -76,9 +76,9 @@ var vowels = [...]rune {'a', 'e', 'i', 'o', 'u'}
    vowelcount = 0
    thing := StringToRuneSlice(strings.ToLower(s))
 
-   for i := 0; i < len(thing); i++ {
-      if In(thing[i], alphabet[:]) {
-         if In(thing[i], vowels[:]) {
+   for _, inletter := range thing {
+      if In(inletter, alphabet[:]) {
+         if In(inletter, vowels[:]) {
             vowelcount += 1
          } else {
             conscount += 1
