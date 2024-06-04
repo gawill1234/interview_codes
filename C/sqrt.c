@@ -67,6 +67,11 @@ int i;
 long startval;
 double count;
 
+   if (orig < 0) {
+      printf("sqrt() of negative is imaginary.  Not done here.\n");
+      return(NAN);
+   }
+
    startval = orig;
    count = 0;
    i = 1;
@@ -140,6 +145,30 @@ double mynum, mlibnum, mysquare, sqrtsquare;
    printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
 
    number = 2048;
+   mynum = square_root(number);
+   mlibnum = sqrt(number);
+   mysquare = mynum * mynum;
+   sqrtsquare = mlibnum * mlibnum;
+   printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
+   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+
+   number = -113;
+   mynum = square_root(number);
+   mlibnum = sqrt(number);
+   mysquare = mynum * mynum;
+   sqrtsquare = mlibnum * mlibnum;
+   printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
+   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+
+   number = 101101101;
+   mynum = square_root(number);
+   mlibnum = sqrt(number);
+   mysquare = mynum * mynum;
+   sqrtsquare = mlibnum * mlibnum;
+   printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
+   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+
+   number = 7919;
    mynum = square_root(number);
    mlibnum = sqrt(number);
    mysquare = mynum * mynum;
