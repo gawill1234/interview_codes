@@ -81,6 +81,14 @@ show it can be done that way.
 python3
 translate and maketrans
 ```
+repeaters.py
+```
+Count the number of times a character occurs within a
+string.  A variant of sortastring.py with different
+outputs.
+Also done, in a limited fashion, with map().  So
+contains two ways to do the counts.
+```
 prime.py
 ```
 Tell if number is prime
