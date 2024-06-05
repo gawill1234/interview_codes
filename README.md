@@ -168,6 +168,14 @@ It came from a popular training site so folks
 will probably see it eventually.
 python3
 ```
+sortastring.py
+```
+A python version of sortastring.c.  Just to
+see what it would look like.  Yes, python
+has easier methods of doing sorts.  But this
+has uses other than sorts (character counts, etc).
+python3
+```
 
 ## C
 prime
