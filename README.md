@@ -258,6 +258,11 @@ linked_list.c
 ```
 a basic linked list program
 ```
+link_list_mrg.c
+```
+Merge two sorted linked lists.
+2 ways.  One destructive, one not.
+```
 break_cycle.c
 ```
 Create a linked list
