@@ -66,8 +66,8 @@ char *sortedthing;
    init_array(myarray);
    parse_word_string(mystring, myarray);
    sortedthing = sortedarray(myarray);
-   printf("%s\n", mystring);
-   printf("%s\n", sortedthing);
+   printf("original:  %s\n", mystring);
+   printf("sorted  :  %s\n", sortedthing);
    free(sortedthing);
 
 }
