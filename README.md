@@ -320,6 +320,14 @@ becomes  4 5 1 2 3
 2 methods.  Transfer one array into another and
 in place.
 ```
+array_bin_srch.c
+```
+Binary search of a sorted array.
+Seems to comply with expected time complexity in
+terms of look ups.  Other than that, I have not
+compared it to anything that may exist.  So, it
+is what it is.
+```
 power.c
 ```
 Do the power of a number without pow().
