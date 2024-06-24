@@ -30,6 +30,17 @@
  */
 #define ARRSZ 1024
 
+int expected_lookups() {
+int zim = 2;
+int count = 1;
+
+   while (zim < ARRSZ) {
+      zim = zim * 2;
+      count += 1;
+   }
+
+   return(count);
+}
 /*
  *   Initialize the array.
  *   All even numbers between
@@ -213,6 +224,8 @@ int loc, i;
          printf("value:  %d, NOT FOUND\n", i);
       }
    }
+
+   printf("EXPECTED LOOK UPS was: %d for an array of size %d\n", expected_lookups(), ARRSZ);
 
    exit(0);
 }
