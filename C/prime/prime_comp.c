@@ -118,15 +118,6 @@ int mood;
       }
       mood += 2;
    }
-   /*
-   mood = 1;
-   do {
-      mood += 2;
-      if ((mynumber % mood) == 0) {
-         return(FALSE);
-      }
-   } while ((mood * mood) <= mynumber);
-   */
 
    return(TRUE);
 }
