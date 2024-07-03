@@ -159,7 +159,6 @@ namespace Rotate {
          newarray = rotate(myarray, arrsz, shift);
          printarray(myarray, arrsz);
          printarray(newarray, arrsz);
-         free(newarray);
          Console.WriteLine("\n");
       
          Console.WriteLine("shift: " +  shift + ",  rotate()");
@@ -175,7 +174,6 @@ namespace Rotate {
          newarray = rotate(myarray, arrsz, shift);
          printarray(myarray, arrsz);
          printarray(newarray, arrsz);
-         free(newarray);
          Console.WriteLine("\n");
       
          reinit(myarray, arrsz);
@@ -191,7 +189,6 @@ namespace Rotate {
          newarray = rotate(myarray, arrsz, shift);
          printarray(myarray, arrsz);
          printarray(newarray, arrsz);
-         free(newarray);
          Console.WriteLine("\n");
       
          reinit(myarray, arrsz);
