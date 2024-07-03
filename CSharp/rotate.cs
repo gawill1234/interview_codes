@@ -77,7 +77,6 @@ namespace Rotate {
       //
       static int[] rotate(int[] myarray, int arrsz, int shift) {
       int i, j;
-      var arrlist = new List<int>();
       int[] newarray = new int[myarray.Length];
       
          Console.WriteLine("Supplied shift: " + shift);
@@ -119,7 +118,7 @@ namespace Rotate {
             temp = myarray[i];
             done = 0;
             newhead = i;
-            while (!done) {
+            while (done != 1) {
                tail = secondpos(newhead, arrsz, rotate);
                if (tail == i) {
                   done = 1;
