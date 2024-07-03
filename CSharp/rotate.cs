@@ -4,7 +4,7 @@ namespace Rotate {
 
    class RotateArr {
 
-      static void printarray(int *myarray, int arrsz) {
+      static void printarray(int[] myarray, int arrsz) {
       int i;
       
          Console.Write("Array: ");
@@ -78,6 +78,7 @@ namespace Rotate {
       static int[] rotate(int[] myarray, int arrsz, int shift) {
       int i, j;
       var arrlist = new List<int>();
+      int[] newarray = new int[myarray.Length];
       
          Console.WriteLine("Supplied shift: " + shift);
          shift = getrealshift(arrsz, shift);
@@ -85,10 +86,9 @@ namespace Rotate {
       
          for (i = 0; i < arrsz; i++) {
             j = secondpos(i, arrsz, shift);
-            arrlist.Add(myarray[i]);
+            newarray[j] = myarray[i];
          }
       
-         var newarray = arrlist.ToArray();
          return(newarray);
       }
       
@@ -113,7 +113,7 @@ namespace Rotate {
          shift = getrealshift(arrsz, shift);
          Console.WriteLine("Actual shift  : " + shift);
          rotate = divisor(shift, arrsz); 
-         Console.WriteLine("shift:  " + shift + ",   rotate: " + rotate);
+         Console.WriteLine("shift:  " + shift + ",   rotate2: " + rotate);
       
          for (i = 0; i < (arrsz - shift); i++) {
             temp = myarray[i];
@@ -144,9 +144,10 @@ namespace Rotate {
          for (i = 0; i < arrsz; i++) {
             myarray[i] = i;
          }
+         return;
       }
       
-      static int main() {
+      static void main() {
       int[] myarray = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
       int[] newarray;
       int arrsz, shift;
