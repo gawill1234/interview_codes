@@ -16,6 +16,11 @@ And I don't remember every little thing about every language
 feature.  I've usually found it is enough to know that a
 capability exists within a language and then look it up.
 
+There are some CSharp variants of some of the programs.  Bear in
+mind that I am relatively new to CSharp and I am using these
+to learn the language.  But, for what they are, you are free to
+use them/steal them.
+
 ## anagrams of a string
 ```
 smile
