@@ -7,7 +7,6 @@ namespace prime {
       static int get_prime2(int mynumber)
       {
       int mood, mylim;
-      // int count;
       
          if (mynumber == 1)
             return(-1);
@@ -29,9 +28,7 @@ namespace prime {
          mood = 3;
          mylim = mynumber;
          
-         //count = 0;
          while (mylim > mood) {
-            //count += 1;
             if ((mynumber % mood) == 0) {
                return(-1);
             }
@@ -39,15 +36,13 @@ namespace prime {
             mood += 2;
          }
       
-         //Console.WriteLine("Iterations to prime:  %d\n", count);
          return(mynumber);
       }
       
-      static int do_primes2(int max)
+      static void do_primes2(int max)
       {
       int count;
       int x, y;
-      
       
          x = 2;
          count = 0;
@@ -55,14 +50,11 @@ namespace prime {
             y = get_prime2(x);
             if (y > 0) {
                count += 1;
-               Console.WriteLine(count + " Prime found: " + y);
-               if ((count % 10000) == 0 ) {
-                  Console.WriteLine("   Other data:  count: " + count);
-               }
+               Console.Write("{0} -- Prime found: {1}\n", count, y);
             }
             x++;
          }
-         return(0);
+         return;
       }
       
       static void Main(string[] args)
