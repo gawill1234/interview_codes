@@ -345,6 +345,24 @@ with the programatic result.  The multiply the results
 to see how close we get to the original number.
 Once I made the results double instead of float, my
 results are the same as the sqrt() function.
+Uses a combination of subtract the odds and guessing.
+Subtract the odds works as follows (using 100 as example):
+1    100 - 1 = 99
+2    99 - 3 = 96
+3    96 - 5 = 91
+4    91 - 7 = 84
+5    84 - 9 = 75
+6    75 - 11 = 64
+7    64 - 13 = 51
+8    51 - 15 = 36
+9    36 - 17 = 19
+10   19 - 19 = 0
+So, the square root of 100 is 10.  Works for whole
+square root values only(i.e., 25, 16, 36, etc).  
+But it gets you close if it is 
+not a whole number so you can guess the rest to get the
+decimal if the square root is not whole.  See the code
+for how the guessing is done.
 ```
 ## Go
 tprimes.go:
