@@ -8,9 +8,9 @@ import sys
 
 class SQRT(object):
 
-   mysqrt = 0
+   mysqrt = 0.0
 
-   def __init__(self, origval):
+   def __init__(self, origval: float):
 
       self.mysqrt = self.square_root(origval)
 
@@ -21,7 +21,7 @@ class SQRT(object):
       return self.mysqrt
 
       
-   def guess_the_rest(self, count, origval):
+   def guess_the_rest(self, count: float, origval: float):
 
       tries = 0
       starter =  0.5
@@ -43,8 +43,8 @@ class SQRT(object):
 
       return newcount
 
-   def square_root(self, myval):
-      count = 0
+   def square_root(self, myval: float):
+      count = 0.0
       nextodd = 1
       origval = myval
 
