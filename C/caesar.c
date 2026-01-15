@@ -16,6 +16,11 @@
  *   uses uppercase letters and ignores spaces.  But,
  *   it could be done with the whole ascii set if you
  *   wanted.
+ *
+ *   This is a variant of the rotate.c program.  Or
+ *   what maketran/translate does with python.  Grab
+ *   a slice of the "key" string and rotate it and use
+ *   that to "encrypt" the message.
  */
 void printarray(char *myarray, int arrsz) {
 int i;
