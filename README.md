@@ -1,4 +1,6 @@
 # interview_codes
+Yes, I wrote these.  To answer everyones first question.
+
 Codes asked in interviews and in skills tests
 I started writing them as I encountered them.  Some are
 kind of stupid.  Like all the anagrams of a word (i.e.,
