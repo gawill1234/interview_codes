@@ -140,7 +140,7 @@ int main() {
 int *newarray, *myarray;
 char *message = "JOB HUNTING IS THE SEVENTH LEVEL OF HELL.";
 char *sage, *other;
-int arrsz, shift, i;
+int arrsz, shift, i, dshift;
 
    arrsz = 127;
    myarray = init_basearray(arrsz);
@@ -156,7 +156,9 @@ int arrsz, shift, i;
     */
    for (i = -2; i < 135; i++) {
       shift = i;
-      printf("Shifts:  %d, %d\n", shift, decrypt_key(arrsz, shift));
+      dshift = decrypt_key(arrsz, shift);
+      printf("Shifts provided:  %d, %d\n", shift, dshift);
+      printf("Shifts actual  :  %d, %d\n", getrealshift(arrsz, shift), getrealshift(arrsz, dshift));
       newarray = rotate(myarray, arrsz, shift);
       sage = new_message(newarray, message, strlen(message));
       printf("Caesar encrypted string\n");
