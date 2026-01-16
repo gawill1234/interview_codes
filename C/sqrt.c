@@ -175,4 +175,13 @@ double mynum, mlibnum, mysquare, sqrtsquare;
    sqrtsquare = mlibnum * mlibnum;
    printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
    printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+
+   printf("And finally, the root of all evil ...\n");
+   number = 666;
+   mynum = square_root(number);
+   mlibnum = sqrt(number);
+   mysquare = mynum * mynum;
+   sqrtsquare = mlibnum * mlibnum;
+   printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
+   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
 }
