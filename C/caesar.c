@@ -100,15 +100,27 @@ int i, value;
    my_message = (char *)calloc(strlen(message), sizeof(char));
 
    for  (i = 0; i < arrsz; i++) {
-      value = (int)message[i] - 65;\
+      value = (int)message[i] - 65;
       if (value >= 0) {
          my_message[i] = newarray[value];
+      } else {
+         my_message[i] = ' ';
       }
    }
 
    return(my_message);
 }
 
+/*
+ *  The decryption key is the array size
+ *  (number of characters in the original array)
+ *  minus the encryption key.  So, if 5 was used
+ *  to encrypt, and there are 26 elements in the
+ *  translation array, the decrypt key will be
+ *  26 - 5 = 21.  Then that is used to retranslate
+ *  the encrypted value back to what it was
+ *  originally.
+ */
 int decrypt_key(int maxkeys, int crypt_key) {
 
    return(maxkeys - crypt_key);
@@ -118,7 +130,7 @@ int main() {
 char myarray[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', \
                   'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
 char *newarray;
-char *message = "HELLO THERE DUDE";
+char *message = "JOB HUNTING IS THE SEVENTH LEVEL OF HELL";
 char *sage, *other;
 int arrsz, shift;
 
@@ -135,7 +147,7 @@ int arrsz, shift;
    free(newarray);
    printf("\n");
 
-   shift = decrypt_key(26, shift);
+   shift = decrypt_key(arrsz, shift);
    newarray = rotate(myarray, arrsz, shift);
    other = new_message(newarray, sage, strlen(message));
    printf("Caesar decrypted string\n");
@@ -153,7 +165,7 @@ int arrsz, shift;
    printf("\n");
    free(newarray);
 
-   shift = decrypt_key(26, shift);
+   shift = decrypt_key(arrsz, shift);
    newarray = rotate(myarray, arrsz, shift);
    other = new_message(newarray, sage, strlen(message));
    printf("Caesar decrypted string\n");
