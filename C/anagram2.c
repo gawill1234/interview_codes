@@ -10,6 +10,8 @@
 int compare_chars(const void *a, const void *b) {
     /*
      *  Cast the void pointers to char pointers and dereference them
+     *  This is bascially defined by what qsort needs to work
+     *  properly.
      */
     return (*(char *)a - *(char *)b);
 }
