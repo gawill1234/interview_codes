@@ -196,17 +196,12 @@ int bits, i, hold;
 }
 
 /***************************************************************************/
-/*  The string reverse problem
-    There are 3 different(well almost different) solutions presented
-    here.  There is a FOR loop, a WHILE loop, and a DO-WHILE loop.
-    They all work.  Take your pick.
-*/
-/***************************************************************************/
 int main()
 {
 
    num_bits(0);
    num_bits(-0);
+   num_bits(7);
    num_bits(127);
    num_bits(128);
    num_bits(82);
