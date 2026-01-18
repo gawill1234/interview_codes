@@ -18,10 +18,13 @@ def decryptit(key):
 
 def runnit(mystring, key):
    
+   print("Original string: ", mystring)
    xx = caesar(mystring, key)
+   print("Encrypted string")
    print("key:", key, "  ", xx)
    new_key = decryptit(key)
    yy = caesar(xx, new_key)
+   print("Decrypted string")
    print("key:", new_key, "  ", yy)
 
    return
