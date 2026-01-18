@@ -120,6 +120,7 @@ int main()
    factorial(8);
    factorial(7);
    factorial(52);
+   factorial(0);
    printf("\n");
 
 
@@ -129,6 +130,7 @@ int main()
    factorial2(8);
    factorial2(7);
    factorial2(52);
+   factorial2(0);
    printf("\n");
 
    factorial3(5);
@@ -137,6 +139,7 @@ int main()
    factorial3(8);
    factorial3(7);
    factorial3(52);
+   factorial3(0);
    printf("\n");
 
    factorial4(5);
@@ -145,4 +148,5 @@ int main()
    factorial4(8);
    factorial4(7);
    factorial4(52);
+   factorial4(0);
 }
