@@ -4,10 +4,12 @@
 #include <string.h>
 #include <ctype.h>
 
+/*
+ *  This is what qsort wants, so this is
+ *  what qsort gets.
+ */
 int compare_chars(const void *a, const void *b) {
-    /*
-     *  Cast the void pointers to char pointers and dereference them
-     */
+
     return (*(char *)a - *(char *)b);
 }
 
