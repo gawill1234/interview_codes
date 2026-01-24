@@ -222,10 +222,37 @@ void dumptree(struct mynode *root)
    }
 }
 
+void printdepth(struct mynode *root) {
+struct mynode *tmp;
+int count;
+
+   tmp = root;
+   count = 0;
+
+   while (tmp != NULL) {
+      count += 1;
+      tmp = tmp->left;
+   }
+   printf("Left depth: %d\n", count);
+
+   tmp = root;
+   count = 0;
+
+   while (tmp != NULL) {
+      count += 1;
+      tmp = tmp->right;
+   }
+   printf("Right depth: %d\n", count);
+
+   return;
+}
+
 int main()
 {
 int i, tt;
-struct mynode* root = NULL;
+struct mynode *root;
+
+   root = NULL;
 
    srand48((long)time(NULL));
 
@@ -243,5 +270,7 @@ struct mynode* root = NULL;
    printf("Dump the contents of the tree:\n");
    dumptree(root);
 
+   printdepth(root);
+
    exit(0);
-}
+ }
