@@ -51,21 +51,19 @@ struct mynode *trinsert(struct mynode *tree, struct mynode *item) {
 
 void printout(struct mynode *tree) {
 
-   if (tree->right != NULL) 
-      printout(tree->right);
+   if (tree->left != NULL) 
+      printout(tree->left);
 
    printf("%d\n", tree->myvalue);
 
-   if (tree->left != NULL) 
-      printout(tree->left);
+   if (tree->right != NULL) 
+      printout(tree->right);
 }
 
 struct mynode *newnode(int value)
 {
 struct mynode *curr;
 
-   printf("ADDING:  %d\n", value);
-   fflush(stdout);
    curr = (struct mynode *)malloc(sizeof(struct mynode));
    curr->myvalue = value;
    curr->left =  NULL;
