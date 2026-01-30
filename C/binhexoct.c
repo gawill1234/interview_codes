@@ -78,6 +78,12 @@ int x, y, z;
     */
    printf("All values as decimal\n");
    printf("OCT %d\n", OCT);
+   /*
+    *   Uncommenting this line will cause the
+    *   bad digit for an octal number error from
+    *   setting it above.
+    */
+   // printf("OCT2 %d\n", OCT2);
    printf("HEX %d\n", HEX);
    printf("BIN %d\n", BIN);
 
