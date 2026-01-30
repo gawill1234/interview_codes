@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define DOMAX 10000
+
 double get_prime2(int mynumber)
 {
 int mood, mylim, count;
@@ -51,12 +53,12 @@ time_t etime, stime;
    x = 2;
    count = 0;
    stime = (int)time((time_t *)NULL);
-   while (count < 10000) {
+   while (count < max) {
       y = get_prime2(x);
       if (y > 0) {
          count += 1;
          printf("Prime found(efficient):   %d\n", y);
-         if ((count % 10000) == 0 ) {
+         if ((count % max) == 0 ) {
             etime = (int)time((time_t *)NULL);
             printf("   Other data:  count: %d,  time: %d\n", count, etime - stime);
             stime = (int)time((time_t *)NULL);
@@ -69,5 +71,5 @@ time_t etime, stime;
 
 main()
 {
-   do_primes2(100);
+   do_primes2(DOMAX);
 }
