@@ -3,6 +3,8 @@
 
 /*
  *  Octal constant
+ *  Leading '0' makes number 
+ *  interpreted as octal
  */
 #define OCT 0020
 
@@ -15,11 +17,15 @@
 
 /*
  *  Hex constant
+ *  Leading '0x' makes number 
+ *  interpreted as hexadecimal
  */
 #define HEX 0x10
 
 /*
  *  Binary constant
+ *  Leading '0b' makes number 
+ *  interpreted as binary
  */
 #define BIN 0b10000
 
