@@ -1,5 +1,5 @@
 #
-#   Two ways to see if a number is odd
+#   Three ways to see if a number is odd
 #   in python3
 #
 def getodds(nums):
