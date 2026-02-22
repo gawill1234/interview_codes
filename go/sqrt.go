@@ -17,11 +17,11 @@ var tries int
     starter = 0.5
     newcount = count + starter
     /*
-     *   Set the limit of tries to 75.
+     *   Set the limit of tries to 150.
      *   Experiments showed that 50 is
      *   probably good enough in terms
-     *   of quality of results.  Set
-     *   to 75 just to give some room.
+     *   of quality of results, in C.  Set
+     *   to 150 just to give some room.
      */
     for (tries < 150) {
        tries += 1
