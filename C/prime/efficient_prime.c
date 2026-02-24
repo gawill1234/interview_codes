@@ -1,9 +1,16 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <time.h>
+#include <sys/time.h>
 
 #define DOMAX 100000
+
+float elapsed(struct timeval st, struct timeval et) {
+float elapsed_time = 0.0;
+
+   elapsed_time = (et.tv_sec + (et.tv_usec/1000000.0)) - (st.tv_sec + (st.tv_usec/1000000.0));
+   return(elapsed_time);
+}
 
 double get_prime2(int mynumber)
 {
@@ -47,12 +54,12 @@ int do_primes2(int max)
 {
 int count;
 int x, y;
-time_t etime, stime;
-
+struct timeval st, et;
+float bmin;
 
    x = 2;
    count = 0;
-   stime = (int)time((time_t *)NULL);
+   gettimeofday(&st,  NULL);
    while (count < max) {
       y = get_prime2(x);
       if (y > 0) {
@@ -62,9 +69,9 @@ time_t etime, stime;
       x++;
    }
 
-   etime = (int)time((time_t *)NULL);
-   printf("   Other data:  count: %d,  time: %ld\n", count, etime - stime);
-   stime = (int)time((time_t *)NULL);
+   gettimeofday(&et,  NULL);
+   bmin = elapsed(st, et);
+   printf("   Other data:  count: %d,  time: %f\n", count, bmin);
 
    return(0);
 };
