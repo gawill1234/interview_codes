@@ -2,12 +2,14 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
 #define DOMAX 100000
 
 double get_prime2(int mynumber)
 {
-int mood, mylim, count;
+int mood;
+float mylim;
 
    if (mynumber == 1)
       return(-1);
@@ -15,31 +17,19 @@ int mood, mylim, count;
    /* 
     *   Lets just accept that we know 2 and 3 are prime numbers
     */
-
    if (mynumber <= 3)
       return(mynumber);
 
-   /*
-    *  Any even number greater than 2 is by definition not a
-    *  prime number so we will skip them.
-    */
-   if ((mynumber % 2) == 0)
-      return(-1);
-
-   mood = 3;
-   mylim = mynumber;
+   mood = 2;
+   mylim = sqrt(mynumber);
    
-   //count = 0;
-   while (mylim > mood) {
-      //count += 1;
+   while (mood <= mylim) {
       if ((mynumber % mood) == 0) {
          return(-1);
       }
-      mylim = mynumber / mood;
-      mood += 2;
+      mood += 1;
    }
 
-   //printf("Iterations to prime:  %d\n", count);
    return(mynumber);
 }
 
