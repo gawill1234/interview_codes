@@ -234,27 +234,32 @@ int i;
       mynum = square_root(number);
       gettimeofday(&et, NULL);
       amin = (elapsed(st, et) * 1000000);
+      aavg += amin;
+   }
 
+   for (i = 0; i < 50; i++) {
       gettimeofday(&st, NULL);
       mlibnum = sqrt(number);
       gettimeofday(&et, NULL);
       bmin = (elapsed(st, et) * 1000000);
+      bavg += bmin;
+  }
 
+   for (i = 0; i < 50; i++) {
       gettimeofday(&st, NULL);
       halleynum = square_root_halley(number);
       gettimeofday(&et, NULL);
       cmin = (elapsed(st, et) * 1000000);
+      cavg += cmin;
+  }
 
+   for (i = 0; i < 50; i++) {
       gettimeofday(&st, NULL);
       heronnum = square_root_heron(number);
       gettimeofday(&et, NULL);
       dmin = (elapsed(st, et) * 1000000);
-
-      aavg += amin;
-      bavg += bmin;
-      cavg += cmin;
       davg += dmin;
-   }
+  }
 
    aavg = aavg / 50.0;
    bavg = bavg / 50.0;
@@ -285,6 +290,10 @@ int i;
  */
 int main() {
 long number;
+struct timeval st, et;
+float fmin;
+
+   gettimeofday(&st, NULL);
 
    number = 16;
    doit(number);
@@ -325,4 +334,8 @@ long number;
    printf("And finally, the root of all evil ...\n");
    number = 666;
    doit(number);
+
+   gettimeofday(&et, NULL);
+   fmin = (elapsed(st, et) * 1000000);
+   printf("Overall run time:  %f microseconds\n", fmin);
 }
