@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <sys/time.h>
+
+float elapsed(struct timeval st, struct timeval et) {
+float elapsed_time = 0.0;
+
+   elapsed_time = (et.tv_sec + (et.tv_usec/1000000.0)) - (st.tv_sec + (st.tv_usec/1000000.0));
+   return(elapsed_time);
+}
 
 /*
  *   Yes, guess the rest.  We know
@@ -87,6 +95,31 @@ double count;
    return(count);
 }
 
+void doit(long number) {
+double mynum, mlibnum, mysquare, sqrtsquare;
+struct timeval st, et;
+float amin, bmin;
+
+   gettimeofday(&st, NULL);
+   mynum = square_root(number);
+   gettimeofday(&et, NULL);
+   amin = (elapsed(st, et) * 1000000);
+
+   gettimeofday(&st, NULL);
+   mlibnum = sqrt(number);
+   gettimeofday(&et, NULL);
+   bmin = (elapsed(st, et) * 1000000);
+
+   mysquare = mynum * mynum;
+   sqrtsquare = mlibnum * mlibnum;
+   printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
+   printf("             program square: %f, sqrt() square: %f\n", mysquare, sqrtsquare);
+   printf("square_root() calc time:  %f microseconds\n", amin);
+   printf("sqrt()        calc time:  %f microseconds\n\n", bmin);
+
+   return;
+}
+
 /*
  *  Run the programs idea of sqrt() and
  *  compare it to the mathlib sqrt() to
@@ -94,94 +127,41 @@ double count;
  */
 int main() {
 long number;
-double mynum, mlibnum, mysquare, sqrtsquare;
 
    number = 16;
-   mynum = square_root(number);
-   mlibnum = sqrt(number);
-   mysquare = mynum * mynum;
-   sqrtsquare = mlibnum * mlibnum;
-   printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   doit(number);
 
    number = 25;
-   mynum = square_root(number);
-   mlibnum = sqrt(number);
-   mysquare = mynum * mynum;
-   sqrtsquare = mlibnum * mlibnum;
-   printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   doit(number);
 
    number = 20;
-   mynum = square_root(number);
-   mlibnum = sqrt(number);
-   mysquare = mynum * mynum;
-   sqrtsquare = mlibnum * mlibnum;
-   printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   doit(number);
 
    number = 24;
-   mynum = square_root(number);
-   mlibnum = sqrt(number);
-   mysquare = mynum * mynum;
-   sqrtsquare = mlibnum * mlibnum;
-   printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   doit(number);
 
    number = 39;
-   mynum = square_root(number);
-   mlibnum = sqrt(number);
-   mysquare = mynum * mynum;
-   sqrtsquare = mlibnum * mlibnum;
-   printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   doit(number);
+
+   number = 97;
+   doit(number);
 
    number = 101;
-   mynum = square_root(number);
-   mlibnum = sqrt(number);
-   mysquare = mynum * mynum;
-   sqrtsquare = mlibnum * mlibnum;
-   printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   doit(number);
 
    number = 2048;
-   mynum = square_root(number);
-   mlibnum = sqrt(number);
-   mysquare = mynum * mynum;
-   sqrtsquare = mlibnum * mlibnum;
-   printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   doit(number);
 
    number = -113;
-   mynum = square_root(number);
-   mlibnum = sqrt(number);
-   mysquare = mynum * mynum;
-   sqrtsquare = mlibnum * mlibnum;
-   printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   doit(number);
 
    number = 101101101;
-   mynum = square_root(number);
-   mlibnum = sqrt(number);
-   mysquare = mynum * mynum;
-   sqrtsquare = mlibnum * mlibnum;
-   printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   doit(number);
 
    number = 7919;
-   mynum = square_root(number);
-   mlibnum = sqrt(number);
-   mysquare = mynum * mynum;
-   sqrtsquare = mlibnum * mlibnum;
-   printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   doit(number);
 
    printf("And finally, the root of all evil ...\n");
    number = 666;
-   mynum = square_root(number);
-   mlibnum = sqrt(number);
-   mysquare = mynum * mynum;
-   sqrtsquare = mlibnum * mlibnum;
-   printf("square root of %ld, program: %f, sqrt(): %f\n", number, mynum, mlibnum);
-   printf("             program square: %f, sqrt() square: %f\n\n", mysquare, sqrtsquare);
+   doit(number);
 }
