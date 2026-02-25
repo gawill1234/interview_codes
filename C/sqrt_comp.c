@@ -7,7 +7,8 @@
  *  Does square roots using 4 different ways
  *    math sqrt() function
  *    subtract the odds paired with final guessing
- *    herons method
+ *    herons method using multiplication
+ *    herons method using division instead
  *    halleys method
  *
  *  Gets run times for each.  Prints values and run times.
@@ -41,6 +42,51 @@ int tries;
      */
     while (tries < 75) {
        nextx = lastx * (lastx * lastx + 3 * orig) / (3 * lastx * lastx + orig);
+       /*
+        *   Since floating point equality rarely
+        *   works well, this is a bailout of
+        *   "close enough".  6 places of
+        *   equality after the decimal point.
+        */
+       if (fabs((nextx * nextx) - orig) < 0.00000001) {
+          return(nextx);
+       }
+       lastx = nextx;
+       tries += 1;
+    }
+
+    return(nextx);
+}
+
+/*
+ *   Looks a little like guesstherest() but it
+ *   also has an actual name.
+ *
+ *   this is herons method, but it uses divide by 2 instead
+ *   of multiply by .5.  It is here only to show the performance
+ *   difference a divide and a multiply.
+ *   division operations can take 10 to 20 cycles.
+ *   multiply generally takes 2 or 3 cycles, so faster.
+ *
+ *   other than that one operation, the two herons method
+ *   routines are identical.  So you can see just how much
+ *   division adds vs multiplication.
+ */
+double heronsmethod_d2(long orig, double count) {
+double lastx, nextx;
+int tries;
+
+    tries = 0;
+    lastx = count;
+    /*
+     *   Set the limit of tries to 75.
+     *   Experiments showed that 50 is
+     *   probably good enough in terms
+     *   of quality of results.  Set
+     *   to 75 just to give some room.
+     */
+    while (tries < 75) {
+       nextx = (lastx + (orig / lastx)) / 2.0;
        /*
         *   Since floating point equality rarely
         *   works well, this is a bailout of
@@ -199,6 +245,26 @@ double count;
 }
 
 /*
+ *   Find square root using herons method
+ */
+double square_root_heron_d2(long orig) {
+int i;
+long startval;
+double count;
+
+   if (orig < 0) {
+      printf("sqrt() of negative is imaginary.  Not done here.\n");
+      return(NAN);
+   }
+
+   startval = orig;
+   count = 0;
+   i = 1;
+   count = heronsmethod_d2(startval, (orig / 2));
+   return(count);
+}
+
+/*
  *   Find square root using halleys method
  */
 double square_root_halley(long orig) {
@@ -220,11 +286,11 @@ double count;
 
 
 void doit(long number) {
-double mynum, mlibnum, halleynum, heronnum;
-double mysquare, sqrtsquare, halleysquare, heronsquare;
+double mynum, mlibnum, halleynum, heronnum, herond2num;
+double mysquare, sqrtsquare, halleysquare, heronsquare, herond2square;
 struct timeval st, et;
-float amin, bmin, cmin, dmin;
-float aavg, bavg, cavg, davg;
+float amin, bmin, cmin, dmin, emin;
+float aavg, bavg, cavg, davg, eavg;
 int i;
 
    aavg = bavg = cavg = davg = 0.0;
@@ -261,24 +327,37 @@ int i;
       davg += dmin;
   }
 
+   for (i = 0; i < 50; i++) {
+      gettimeofday(&st, NULL);
+      herond2num = square_root_heron_d2(number);
+      gettimeofday(&et, NULL);
+      emin = (elapsed(st, et) * 1000000);
+      eavg += emin;
+  }
+
    aavg = aavg / 50.0;
    bavg = bavg / 50.0;
    cavg = cavg / 50.0;
    davg = davg / 50.0;
+   davg = eavg / 50.0;
 
    mysquare = mynum * mynum;
    sqrtsquare = mlibnum * mlibnum;
    heronsquare = heronnum * heronnum;
+   herond2square = herond2num * herond2num;
    halleysquare = halleynum * halleynum;
    printf("square root of %ld, guess:    %f, sqrt():  %f\n", number, mynum, mlibnum);
    printf("square root of %ld, halley(): %f, heron(): %f\n", number, halleynum, heronnum);
-   printf("             guess square:  %f, sqrt() square:  %f\n", mysquare, sqrtsquare);
-   printf("             halley square: %f, heron() square: %f\n", halleysquare, heronsquare);
+   printf("square root of %ld, heron_d2(): %f\n", number, herond2num);
+   printf("             guess square:      %f, sqrt() square:    %f\n", mysquare, sqrtsquare);
+   printf("             halley square:     %f, heron() square:   %f\n", halleysquare, heronsquare);
+   printf("             heron_d2() square: %f\n", herond2square);
    printf("Runtime is average of 50 repeats:\n");
-   printf("   guess()      calc time:  %f microseconds\n", aavg);
-   printf("   sqrt()       calc time:  %f microseconds\n", bavg);
-   printf("   halley()     calc time:  %f microseconds\n", cavg);
-   printf("   heron()      calc time:  %f microseconds\n\n", davg);
+   printf("   guess()             calc time:  %f microseconds\n", aavg);
+   printf("   sqrt()              calc time:  %f microseconds\n", bavg);
+   printf("   halley()            calc time:  %f microseconds\n", cavg);
+   printf("   heron()/multiply    calc time:  %f microseconds\n", davg);
+   printf("   heron_d2()/divide   calc time:  %f microseconds\n\n", eavg);
 
    return;
 }
