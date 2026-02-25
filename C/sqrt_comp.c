@@ -351,18 +351,22 @@ int i;
    heronsquare = heronnum * heronnum;
    herond2square = herond2num * herond2num;
    halleysquare = halleynum * halleynum;
-   printf("square root of %ld, guess:    %f, sqrt():  %f\n", number, mynum, mlibnum);
-   printf("square root of %ld, halley(): %f, heron(): %f\n", number, halleynum, heronnum);
-   printf("square root of %ld, heron_d2(): %f\n", number, herond2num);
-   printf("             guess square:      %f, sqrt() square:    %f\n", mysquare, sqrtsquare);
-   printf("             halley square:     %f, heron() square:   %f\n", halleysquare, heronsquare);
-   printf("             heron_d2() square: %f\n", herond2square);
+
+   printf("##################################################\n");
+   printf("SQUARE ROOT of %ld\n", number);
+   printf("   guess:      %f, sqrt():  %f\n",  mynum, mlibnum);
+   printf("   halley():   %f, heron(): %f\n",  halleynum, heronnum);
+   printf("   heron_d2(): %f\n",  herond2num);
+   printf("   guess square:      %f, sqrt() square:    %f\n", mysquare, sqrtsquare);
+   printf("   halley square:     %f, heron() square:   %f\n", halleysquare, heronsquare);
+   printf("   heron_d2() square: %f\n", herond2square);
    printf("Runtime is average of 50 repeats:\n");
    printf("   guess()             calc time:  %f microseconds\n", aavg);
    printf("   sqrt()              calc time:  %f microseconds\n", bavg);
    printf("   halley()            calc time:  %f microseconds\n", cavg);
    printf("   heron()/multiply    calc time:  %f microseconds\n", davg);
-   printf("   heron_d2()/divide   calc time:  %f microseconds\n\n", eavg);
+   printf("   heron_d2()/divide   calc time:  %f microseconds\n", eavg);
+   printf("##################################################\n\n");
 
    return;
 }
