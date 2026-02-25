@@ -165,7 +165,7 @@ int tries;
     while (tries < 75) {
        tries += 1;
        if ((newcount * newcount) > orig) {
-          starter = starter / 2.0;
+          starter = starter * .5;
           newcount = newcount - starter;
        } else if ((newcount * newcount) < orig) {
           /*
@@ -175,7 +175,7 @@ int tries;
            *  lowest number of attempts on a consistent
            *  basis.
            */
-          starter = starter + (starter / 2.0);
+          starter = starter + (starter * .5);
           newcount = newcount + starter;
        } else {
           return(newcount);
@@ -294,6 +294,11 @@ float aavg, bavg, cavg, davg, eavg;
 int i;
 
    aavg = bavg = cavg = davg = 0.0;
+
+   if (number < 0) {
+      printf("sqrt() of negative is imaginary.  Not done here.\n");
+      return;
+   }
 
    for (i = 0; i < 50; i++) {
       gettimeofday(&st, NULL);
