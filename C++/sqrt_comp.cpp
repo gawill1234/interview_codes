@@ -182,11 +182,6 @@ class heronSquareDivide {
     */
    double square_root_heron() {
 
-      if (orig < 0) {
-         std::printf("sqrt() of negative is imaginary.  Not done here.\n");
-         return(NAN);
-      }
-
       count = heronsmethod();
       return(count);
    }
@@ -248,11 +243,6 @@ class heronSquareMult {
     *   Find square root using herons method
     */
    double square_root_heron() {
-
-      if (orig < 0) {
-         std::printf("sqrt() of negative is imaginary.  Not done here.\n");
-         return(NAN);
-      }
 
       count = heronsmethod();
       return(count);
