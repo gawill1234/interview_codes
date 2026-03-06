@@ -328,10 +328,8 @@ class guessSquareRoot {
    double square_root() {
    int i;
    long startval;
-   double count;
 
       startval = orig;
-      count = 0.0;
       i = 1;
       while (startval > 0) {
          startval = startval - i;
