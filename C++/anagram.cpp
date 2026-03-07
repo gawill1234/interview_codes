@@ -139,6 +139,8 @@ int main() {
 
    isanagram("abcdefghi", "jklmnop");
    isanagram("abcdefghi", "fghabcdei");
+   isanagram("basiparachromatin", "marsipobranchiata");
+   isanagram("thermonastically", "hematocrystallin");
 
    exit(0);
 }
