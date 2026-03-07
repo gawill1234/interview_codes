@@ -3,8 +3,6 @@
 #include <string>
 #include <cstring>
 
-#include <ctype.h>
-
 /*
  *  Ok, I admit this one is a bit weird.  It sorts
  *  all the letters in an array by counting the each
