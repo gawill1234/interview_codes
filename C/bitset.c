@@ -2,6 +2,15 @@
 #include <stdlib.h>
 
 /*
+ *   Found these as an answer to a stack overflow question.
+ *   They work beautifully.  The only changes I made were
+ *   to make it so you coulld do a "not paying attention"
+ *   cut and paste and it would still work.  Also changed
+ *   a couple of variable names so I understand just looking
+ *   what parameter is what.
+ */
+
+/*
  *   Set the nth bit to 1
  */
 unsigned int bit_set(unsigned int twiddlenum, unsigned int n) {
