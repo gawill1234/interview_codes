@@ -32,8 +32,8 @@ unsigned int bit_check(unsigned int twiddlenum, unsigned int n) {
 /*
  *   Set the nth bit to 0 or 1
  */
-unsigned int bit_set_to(unsigned int twiddlenum, unsigned int n, unsigned int x) {
-    return (twiddlenum & ~((unsigned int)1 << n)) | ((unsigned int)x << n);
+unsigned int bit_set_to(unsigned int twiddlenum, unsigned int n, unsigned int setto) {
+    return (twiddlenum & ~((unsigned int)1 << n)) | ((unsigned int)setto << n);
 }
 
 void printbinary(unsigned int num) {
