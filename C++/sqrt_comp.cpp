@@ -90,7 +90,7 @@ class halleySquare{
            *   "close enough".  6 places of
            *   equality after the decimal point.
            */
-          if (fabs((nextx * nextx) - orig) < 0.00000001) {
+          if (fabs((nextx * nextx) - orig) < 0.0000000001) {
              return(nextx);
           }
           lastx = nextx;
@@ -222,7 +222,7 @@ class heronSquareMult {
         *   to 125 just to give some room.
         */
        while (tries < 125) {
-          nextx = .5 * (lastx + (orig / lastx));
+          nextx = 0.5 * (lastx + (orig / lastx));
           /*
            *   Since floating point equality rarely
            *   works well, this is a bailout of
@@ -410,7 +410,7 @@ int i;
    bavg = bavg / 50.0;
    cavg = cavg / 50.0;
    davg = davg / 50.0;
-   davg = eavg / 50.0;
+   eavg = eavg / 50.0;
 
    mysquare = mynum * mynum;
    sqrtsquare = mlibnum * mlibnum;

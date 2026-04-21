@@ -41,7 +41,7 @@ int tries;
      *   to 75 just to give some room.
      */
     while (tries < 75) {
-       nextx = lastx * (lastx * lastx + 3 * orig) / (3 * lastx * lastx + orig);
+       nextx = (lastx * ((lastx * lastx) + (3 * orig))) / (((3 * lastx) * lastx) + orig);
        /*
         *   Since floating point equality rarely
         *   works well, this is a bailout of
@@ -121,7 +121,7 @@ int tries;
      *   to 75 just to give some room.
      */
     while (tries < 75) {
-       nextx = .5 * (lastx + (orig / lastx));
+       nextx = (lastx + (orig / lastx)) * .5;
        /*
         *   Since floating point equality rarely
         *   works well, this is a bailout of
@@ -240,7 +240,8 @@ double count;
    startval = orig;
    count = 0;
    i = 1;
-   count = heronsmethod(startval, (orig / 2));
+   // count = heronsmethod(startval, (orig / 2));
+   count = heronsmethod(startval, (orig * .5));
    return(count);
 }
 
@@ -280,7 +281,7 @@ double count;
    startval = orig;
    count = 0;
    i = 1;
-   count = halleysmethod(startval, (orig / 2));
+   count = halleysmethod(startval, (orig * .5));
    return(count);
 }
 
@@ -344,7 +345,7 @@ int i;
    bavg = bavg / 50.0;
    cavg = cavg / 50.0;
    davg = davg / 50.0;
-   davg = eavg / 50.0;
+   eavg = eavg / 50.0;
 
    mysquare = mynum * mynum;
    sqrtsquare = mlibnum * mlibnum;
