@@ -351,9 +351,12 @@ double mysquare, sqrtsquare, halleysquare, heronsquare, herond2square;
 struct timeval st, et;
 float amin, bmin, cmin, dmin, emin;
 float aavg, bavg, cavg, davg, eavg;
-int i;
+float amax, bmax, cmax, dmax, emax;
+int i, testruns;
 
-   aavg = bavg = cavg = davg = 0.0;
+   aavg = bavg = cavg = davg = eavg = 0.0;
+   amax = bmax = cmax = dmax = emax = 0.0;
+   testruns = 100;
 
    if (number < 0) {
       std::printf("sqrt() of negative is imaginary.  Not done here.\n");
@@ -362,55 +365,70 @@ int i;
 
    myTimer timerObj;
 
-   for (i = 0; i < 50; i++) {
+   for (i = 0; i < testruns; i++) {
       guessSquareRoot myGuess(number);
       timerObj.startTime();
       mynum = myGuess.square_root();
       timerObj.endTime();
       amin = (timerObj.getElapsed() * 1000000);
       aavg += amin;
+      if (amin > amax) {
+         amax = amin;
+      }
    }
 
-   for (i = 0; i < 50; i++) {
+   for (i = 0; i < testruns; i++) {
       timerObj.startTime();
       mlibnum = std::sqrt(number);
       timerObj.endTime();
       bmin = (timerObj.getElapsed() * 1000000);
       bavg += bmin;
+      if (bmin > bmax) {
+         bmax = bmin;
+      }
   }
 
-   for (i = 0; i < 50; i++) {
+   for (i = 0; i < testruns; i++) {
       halleySquare myHalley(number);
       timerObj.startTime();
       halleynum = myHalley.square_root_halley();
       timerObj.endTime();
       cmin = (timerObj.getElapsed() * 1000000);
       cavg += cmin;
+      if (cmin > cmax) {
+         cmax = cmin;
+      }
   }
 
-   for (i = 0; i < 50; i++) {
+   for (i = 0; i < testruns; i++) {
       heronSquareMult myHeron(number);
       timerObj.startTime();
       heronnum = myHeron.square_root_heron();
       timerObj.endTime();
       dmin = (timerObj.getElapsed() * 1000000);
       davg += dmin;
+      if (dmin > dmax) {
+         dmax = dmin;
+      }
   }
 
-   for (i = 0; i < 50; i++) {
+   for (i = 0; i < testruns; i++) {
       heronSquareDivide myHerond2(number);
       timerObj.startTime();
       herond2num = myHerond2.square_root_heron();
       timerObj.endTime();
       emin = (timerObj.getElapsed() * 1000000);
       eavg += emin;
+      if (emin > emax) {
+         emax = emin;
+      }
   }
 
-   aavg = aavg / 50.0;
-   bavg = bavg / 50.0;
-   cavg = cavg / 50.0;
-   davg = davg / 50.0;
-   eavg = eavg / 50.0;
+   aavg = (aavg - amax) / (testruns - 1);
+   bavg = (bavg - bmax) / (testruns - 1);
+   cavg = (cavg - cmax) / (testruns - 1);
+   davg = (davg - dmax) / (testruns - 1);
+   eavg = (eavg - emax) / (testruns - 1);
 
    mysquare = mynum * mynum;
    sqrtsquare = mlibnum * mlibnum;
@@ -426,7 +444,7 @@ int i;
    std::printf("   guess square:      %f, sqrt() square:    %f\n", mysquare, sqrtsquare);
    std::printf("   halley square:     %f, heron() square:   %f\n", halleysquare, heronsquare);
    std::printf("   heron_d2() square: %f\n", herond2square);
-   std::printf("Runtime is average of 50 repeats:\n");
+   std::printf("Runtime is average of %d repeats:\n", testruns);
    std::printf("   guess()             calc time:  %f microseconds\n", aavg);
    std::printf("   sqrt()              calc time:  %f microseconds\n", bavg);
    std::printf("   halley()            calc time:  %f microseconds\n", cavg);
