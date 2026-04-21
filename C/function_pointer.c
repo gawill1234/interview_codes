@@ -65,29 +65,32 @@ int main()
 {
 char blarg[32];
 /*   One way of doing declarations for function pointers.  */
-typedef void (*func_p)();
-typedef int (*func_p2)();
-func_p func_array[] = {
+typedef void (*func_p)(char *);
+typedef int (*func_p2)(int);
+typedef void (*func_p3)(int);
+typedef void (*func_p4)();
+func_p4 func_array[] = {
    stuffy,
    endian
 };
-func_p qqqq;
+func_p3 qqqq;
 func_p2 zzzz;
+func_p rrrr;
 
    printf("Calls using function pointers from a function array\n");
    func_array[0]();
    func_array[1]();
 
    qqqq = oddeven(1);
-   qqqq();
+   qqqq(1);
    qqqq = oddeven(2);
-   qqqq();
+   qqqq(2);
 
-   qqqq = generalfp;
+   rrrr = generalfp;
    strcpy(blarg, "this is my first string");
-   qqqq(blarg);
+   rrrr(blarg);
    strcpy(blarg, "this is my second string");
-   qqqq(blarg);
+   rrrr(blarg);
    zzzz = intgenfp;
    printf("returned:   %d\n", zzzz(5));
    printf("returned:   %d\n", zzzz(1));
