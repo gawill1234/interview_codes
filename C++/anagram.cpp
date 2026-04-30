@@ -40,8 +40,6 @@ class aWord {
 
       /*  Destructor  */
       ~aWord() {
-   
-         std::printf("Obliterate the allocated memory ...\n");
 
          free(sorted);
          free(origword);
