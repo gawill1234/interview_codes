@@ -190,7 +190,7 @@ char *newstr;
    shrinkwrap2(str4);
    std::printf("#############\n\n");
    shrinkwrap(str5);
-   shrinkwrap(str5);
+   shrinkwrap2(str5);
    std::printf("#############\n\n");
    shrinkwrap(str6);
    shrinkwrap2(str6);
