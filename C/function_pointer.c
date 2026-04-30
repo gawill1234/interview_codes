@@ -1,8 +1,14 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdint.h>
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
+
+typedef void (*func_p)(int);
+typedef int (*func_p2)(int);
+typedef void (*func_p3)(char *);
+typedef void (*func_p4)();
 
 /**********************************************************************/
 /*
@@ -39,7 +45,7 @@ void evenout(int mynumber)
 
 void *oddeven(int mynumber)
 {
-void (*fp)();
+void (*fp)(int);
 
    if (mynumber & 01)
       fp = oddout;
@@ -61,21 +67,16 @@ int intgenfp(int myvalue)
    return(myvalue + 2);
 }
 
-int main()
-{
+/*
+ *   One way of doing declarations for function pointers.
+ *   See function pointer typedef at the top.
+ */
+int main() {
 char blarg[32];
-/*   One way of doing declarations for function pointers.  */
-typedef void (*func_p)(char *);
-typedef int (*func_p2)(int);
-typedef void (*func_p3)(int);
-typedef void (*func_p4)();
-func_p4 func_array[] = {
-   stuffy,
-   endian
-};
-func_p3 qqqq;
+func_p4 func_array[2] = {stuffy, endian};
+func_p qqqq;
 func_p2 zzzz;
-func_p rrrr;
+func_p3 yyyy;
 
    printf("Calls using function pointers from a function array\n");
    func_array[0]();
@@ -86,14 +87,16 @@ func_p rrrr;
    qqqq = oddeven(2);
    qqqq(2);
 
-   rrrr = generalfp;
+   yyyy = generalfp;
    strcpy(blarg, "this is my first string");
-   rrrr(blarg);
+   yyyy(blarg);
    strcpy(blarg, "this is my second string");
-   rrrr(blarg);
+   yyyy(blarg);
    zzzz = intgenfp;
    printf("returned:   %d\n", zzzz(5));
    printf("returned:   %d\n", zzzz(1));
    printf("End function pointer illustration\n\n");
+
+   return(0);
 
 }

@@ -1,66 +1,54 @@
-#include <stdio.h> 
-#include <stdlib.h>
-  
-/*
- *   Swap the value of 2 variables
- *   in place with no additional
- *   variables.
- */
+#include <stdio.h>
+
 void swappit(int a, int b) {
 
-   printf("SWAP,    a: %d, b: %d\n", a, b); 
-  
+   printf("SWAP,     a: %d, b: %d\n", a, b);
+
    /*
-    *   Code to swap 'a' and 'b' 
+    * Swap a with b
     */
-   a = a + b; 
-   b = a - b; 
-   a = a - b; 
-  
-   printf("SWAPPED, a: %d, b: %d\n\n", a, b); 
+   a = a + b;
+   b = a - b;
+   a = a - b;
+
+   printf("SWAPPED,  a: %d, b: %d\n\n", a, b);
    fflush(stdout);
 
    return;
 }
 
-/*
- *   Swap the value of 2 variables
- *   in place with no additional
- *   variables.
- *   XOR variant.
- */
 void swappit2(int a, int b) {
 
-   printf("SWAP,    a: %d, b: %d\n", a, b); 
-  
+   printf("SWAP,     a: %d, b: %d\n", a, b);
+
    /*
-    *   Code to swap 'a' and 'b' 
+    * Swap a with b
     */
    a ^= b;
    b ^= a;
    a ^= b;
-  
-   printf("SWAPPED, a: %d, b: %d\n\n", a, b); 
+
+   printf("SWAPPED,  a: %d, b: %d\n\n", a, b);
    fflush(stdout);
 
    return;
 }
-int main() 
-{ 
 
-   printf("=========================\n");
-   printf("add/subract method of swapping\n");
-   swappit(9, 23);
-   swappit(32, 7);
-   swappit(1, 2);
-   swappit(-3, 7);
+int main()
+{
+   printf("EXOR swap ...\n");
 
-   printf("=========================\n");
-   printf("XOR method of swapping\n");
-   swappit2(9, 23);
-   swappit2(32, 7);
-   swappit2(1, 2);
-   swappit2(-3, 7);
-  
-   exit(0);
+   swappit2(1, 9);
+   swappit2(-3, -9);
+   swappit2(0, -1);
+   swappit2(0, 0);
+
+   printf("Another way to do the swap (+/-) ...\n");
+
+   swappit(1, 9);
+   swappit(-3, -9);
+   swappit(0, -1);
+   swappit(0, 0);
+
+   return 0;
 }
